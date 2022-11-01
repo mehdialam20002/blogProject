@@ -12,7 +12,8 @@
 
 
 .column {
-  float: left;
+  display: flex;
+  flex-direction: row;
   width: 23%;
   margin-bottom: 16px;
   padding: 0 8px;
@@ -56,30 +57,45 @@
   cursor: pointer;
   width: 100%;
 }
+.cont{
+  display: flex;
+  /* margin-left: 100px; */
+  flex-direction: row;
+}
 
 .button:hover {
   background-color: #555;
 }
 
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-}
+
 .row{
     padding: 0px 66px;
 }
 
 .cont{
   display: flex;
-  /* margin-left: 100px; */
-  flex-direction: column;
+  margin-left: 100px;
+  flex-direction: row;
 }
 .whole-cont{
-  margin-top: 90px;
+  margin-top: 20px;
   margin-bottom: 100px;
+}
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .cont{
+  display: flex;
+  margin-left: 0px;
+  flex-direction: column;
+}
+  .whole-cont{
+  margin-top: 140px;
+  margin-bottom: 40px;
+}
 }
 
 </style>

@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <style>
         .profilee{
+            width: 18rem;
             margin-top: 200px;
             margin-bottom: 100px;
             margin-left: 600px;
@@ -26,10 +27,10 @@
         @media screen and (max-width: 600px) {
     .profilee{
             margin-top: 200px;
-            margin-bottom: 100px;
-            margin-left: 110px; 
-             margin-right: 60px;
-             
+            margin-bottom: 60px;
+            margin-left: 0px; 
+             margin-right: 0px;
+             width: 100%;
             padding: 19px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
@@ -46,7 +47,7 @@
     
     {% if request.user.is_authenticated %}
     
-    <div class="card profilee" style="width: 18rem;">
+    <div class="card profilee" >
         <div class="card-header text-success marg">
             <strong>Your Profile:</strong>
         </div>
