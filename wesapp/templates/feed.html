@@ -305,14 +305,7 @@ border: 1px solid rgb(224, 210, 210);
             {{post.title}}</h5>
             <p> <strong>Content:</strong> {{ post.content2}} </p>
           <p class="card-text"><strong>Author:</strong> {{ post.author}}</p>
-          <div class="like">
-            <form action="{% url 'like_post' %}" method="post">
-              {% csrf_token %} 
-              <button  type="submit" name="post_id" value="{{post.id}}" class="btn gg btn-primary">Like</button>
-            </form>
-          
-      <a href="{% url 'add_comment' post.pk %}" class="btn btn-primary"> Comment</a>
-    </div>
+         
     <div class="container-fluid com">
       <h2 style="border-bottom: 1px solid rgb(226, 208, 208); padding: 6px;">Comments</h2>
       {% if not post.comments.all %}
