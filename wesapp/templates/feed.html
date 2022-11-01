@@ -20,11 +20,15 @@
         display: flex;
         flex-direction: row;
         margin-top: 94px;
-        justify-content: space-between;
+        justify-content: 
+        space-between;
+        margin-left: 300px;
+        margin-right: 300px;
     }
     .card{
         margin-top: 30px;
         margin-left: 300px;
+        width: 50%;
     }
     .like{
         display: flex;
@@ -65,8 +69,9 @@ border: 1px solid rgb(224, 210, 210);
     }
     .card{
         margin-top: 40px;
-        margin-left: 0px;
+        /* margin-left: 0px; */
         margin: auto;
+        width: 100%;
         margin-bottom: 20px;
     }
     .like{
@@ -112,7 +117,7 @@ border: 1px solid rgb(224, 210, 210);
     
    
 {% for post in object_list %}
-<div class="card w-50 ">
+<div class="card  ">
     <div class="card-body">
       <div class="edit">
         
@@ -151,7 +156,7 @@ border: 1px solid rgb(224, 210, 210);
       </form>
 
       
-      <a href="{% url 'add_comment' post.pk %}" class="btn btn-primary"><i class="fa fa-thin fa-comment"></i>&nbsp; Comment</a>
+      <a href="{% url 'add_comment' post.pk %}" class="btn btn-primary">Comment</a>
       </div>
       <div class="container-fluid com">
         <h2 style="border-bottom: 1px solid rgb(226, 208, 208); padding: 6px;">Comments</h2>
@@ -187,6 +192,11 @@ border: 1px solid rgb(224, 210, 210);
 
     
 <style>
+    .edit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
     .posts{
         
         padding: 10px;
@@ -197,18 +207,33 @@ border: 1px solid rgb(224, 210, 210);
         display: flex;
         flex-direction: row;
         margin-top: 94px;
-        justify-content: space-between;
+        justify-content: 
+        space-between;
+        margin-left: 300px;
+        margin-right: 300px;
     }
     .card{
-        margin-top: 60px;
+        margin-top: 30px;
         margin-left: 300px;
+        width: 50%;
     }
     .like{
         display: flex;
         justify-content: space-between;
     }
+    .commentt{
+      display: flex;
+      justify-content: space-between;
+    }
+    .com{
+margin-top: 33px;
+border: 1px solid rgb(224, 210, 210);
+    }
+    .aa{
+  margin-top: 80px;
+   margin-left:10px;
+}
 
-    
 
 @media screen and (max-width:600px)
 {
@@ -235,8 +260,9 @@ border: 1px solid rgb(224, 210, 210);
     }
     .card{
         margin-top: 40px;
-        margin-left: 0px;
+        /* margin-left: 0px; */
         margin: auto;
+        width: 100%;
         margin-bottom: 20px;
     }
     .like{
@@ -257,7 +283,10 @@ border: 1px solid rgb(224, 210, 210);
       gap: 10px;
       justify-content: space-between;
     }
-    
+    .aa{
+  margin-top:190px;
+  margin-left:10px;
+}
 
 }
 
@@ -268,9 +297,9 @@ border: 1px solid rgb(224, 210, 210);
 
 
     
-<h1 style="margin-top: 80px; margin-left:150px" >Posts:</h1>
+<h1 class="aa" >Posts:</h1>
     {% for post in object_list %}
-    <div class="card w-50 ">
+    <div class="card ">
         <div class="card-body">
           <h5 class="card-title"><strong>Title:</strong>
             {{post.title}}</h5>
@@ -279,10 +308,10 @@ border: 1px solid rgb(224, 210, 210);
           <div class="like">
             <form action="{% url 'like_post' %}" method="post">
               {% csrf_token %} 
-              <button  type="submit" name="post_id" value="{{post.id}}" class="btn btn-primary">Like</button>
+              <button  type="submit" name="post_id" value="{{post.id}}" class="btn gg btn-primary">Like</button>
             </form>
           
-      <a href="{% url 'add_comment' post.pk %}" class="btn btn-primary"><i class="fa fa-thin fa-comment"></i>&nbsp; Comment</a>
+      <a href="{% url 'add_comment' post.pk %}" class="btn btn-primary"> Comment</a>
     </div>
     <div class="container-fluid com">
       <h2 style="border-bottom: 1px solid rgb(226, 208, 208); padding: 6px;">Comments</h2>
