@@ -17,10 +17,28 @@
             margin-top: 40px;
             justify-content: c;
         }
+.a{
+    margin-top: 100px;
+}
+        @media screen and (max-width: 600px) {
+            .news_container{
+            display: flex;
+           
+            margin-top: 40px;
+          
+            margin-left: 200px;
+        }
+        .a{
+    margin-top: 200px;
+}
+
+
+        }
+
     </style>
 </head>
 <body >
-    <h1 class="text-center text-primary" style="margin-top: 100px;">Stocks News</h1>
+    <h1 class="text-center a text-primary">Stocks News</h1>
 <div class="container news_container">
     <div class="row">
         
@@ -29,7 +47,7 @@
 
 
 <div class="col-sm">
-<div class="card col-6" style="width: 18rem;">
+<div class="card col-6" style="width: 475px;">
     <img class="card-img-top" src="{{i.urlToImage}}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">{{i.title}}</h5>

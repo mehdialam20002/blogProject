@@ -38,12 +38,71 @@
 margin-top: 33px;
 border: 1px solid rgb(224, 210, 210);
     }
+
+
+@media screen and (max-width:600px)
+{
+
+.edit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+    .posts{
+        
+        padding: 10px;
+        margin: 0px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .containerr{
+        display: flex;
+        flex-direction: column;
+        margin-top: 220px;
+       margin-left: 90px;
+       margin-right: 97px;
+       margin-bottom: 20px;
+       
+    }
+    .card{
+        margin-top: 40px;
+        margin-left: 0px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .like{
+        display: flex;
+        justify-content: space-between;
+    }
+    .commentt{
+      display: flex;
+      justify-content: space-between;
+    }
+    .com{
+margin-top: 30px;
+border: 1px solid rgb(224, 210, 210);
+    }
+    .both{
+      display: flex;
+      /* flex-direction: column; */
+      gap: 10px;
+      justify-content: space-between;
+    }
+    
+
+}
+
+
+
+
+
+
+
 </style>
 
-<div class="containerr container">
+<div class=" containerr ">
     <h1  >Posts:</h1>
 
-    <div>
+    <div class="both">
       <a href="{% url 'add_post' %}"><button class="btn btn-primary">ADD POST</button></a>
 
     <a href="{% url 'mypost' %}"><button class="btn btn-success">MY POST</button></a>
@@ -148,6 +207,63 @@ border: 1px solid rgb(224, 210, 210);
         display: flex;
         justify-content: space-between;
     }
+
+    
+
+@media screen and (max-width:600px)
+{
+
+.edit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+    .posts{
+        
+        padding: 10px;
+        margin: 0px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .containerr{
+        display: flex;
+        flex-direction: column;
+        margin-top: 220px;
+       margin-left: 90px;
+       margin-right: 97px;
+       margin-bottom: 20px;
+       
+    }
+    .card{
+        margin-top: 40px;
+        margin-left: 0px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .like{
+        display: flex;
+        justify-content: space-between;
+    }
+    .commentt{
+      display: flex;
+      justify-content: space-between;
+    }
+    .com{
+margin-top: 30px;
+border: 1px solid rgb(224, 210, 210);
+    }
+    .both{
+      display: flex;
+      /* flex-direction: column; */
+      gap: 10px;
+      justify-content: space-between;
+    }
+    
+
+}
+
+
+
+
 </style>
 
 

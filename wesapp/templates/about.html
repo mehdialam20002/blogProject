@@ -61,10 +61,11 @@
   background-color: #555;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 600px) {
   .column {
     width: 100%;
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }
 .row{
@@ -73,10 +74,11 @@
 
 .cont{
   display: flex;
-  margin-left: 100px;
+  /* margin-left: 100px; */
+  flex-direction: column;
 }
 .whole-cont{
-  margin-top: 10px;
+  margin-top: 90px;
   margin-bottom: 100px;
 }
 
